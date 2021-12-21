@@ -8,7 +8,7 @@ fastify.get('/', (req, res) => {
   res.send({ hello: 'world' });
 });
 
-fastify.listen(3000, (err, address) => {
+fastify.listen(+process.env.PORT!, (err, address) => {
   console.log(address);
   if (err) {
     fastify.log.error(err);
